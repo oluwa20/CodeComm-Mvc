@@ -1,0 +1,400 @@
+﻿@{
+    ViewData["Title"] = "Message";
+    Layout = "_LayoutHome";
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="~/tailwind/tailwind.js"></script>
+    <link rel="stylesheet"
+          href="~/plugins/fontawesome-free-6.4.2-web/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#232168",
+                        secondary: "#cccccc",
+                        white: "#ffffff",
+                        blue: "#232168",
+                        black: "#000000",
+                    },
+                    screens: {
+                        sm: "500px",
+                        md: "800px",
+                        lg: "1024px",
+                        // => media (min-width: 1024px) { ... }
+
+                        xl: "1280px",
+                        // => media (min-width: 1280px) { ... }
+
+                        "2xl": "1536px",
+                        // => media (min-width: 1536px) { ... }
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+    <main class="lg:flex lg:space-x-96 xl:space-x-[450px]">
+        <section class="w-full lg:h-screen lg:w-96 lg:fixed lg:overflow-y-scroll xl:w-[450px]">
+            <nav class="bg-primary flex justify-between items-center sticky top-0 py-6 px-2 md:px-7 lg:px-4">
+                <p class="text-white text-3xl font-semibold md:text-4xl lg:text-2xl">
+                    Messages
+                </p>
+                <div class="space-x-4">
+                    <i class="fa-solid fa-magnifying-glass text-xl text-white md:text-2xl lg:text-lg"></i>
+                    <button>
+                        <i class="fa-solid fa-ellipsis text-white text-xl md:text-2xl lg:text-lg"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="py-2 px-3 md:px-7 lg:px-4 space-y-1 lg:border-r lg:border-secondary">
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/ff1.jpg"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3 md:space-x-5 lg:space-x-3">
+                        <img src="~/images/img_avatar1.png"
+                             class="rounded-full h-16 w-16 lg:h-12 lg:w-12" />
+                        <div class="">
+                            <p class="text-xl font-bold md:text-2xl lg:text-xl">
+                                David Daniels
+                            </p>
+                            <p class="">Sounds Good!</p>
+                        </div>
+                    </div>
+                    <p class="">9:19am</p>
+                </div>
+            </div>
+            <footer class="sticky bottom-0 w-full h-16 md:h-20 bg-white flex justify-evenly flex-row lg:hidden">
+                <a href="homepage.html">
+                    <i class="fa-solid fa-house text-3xl md:text-4xl py-4 md:py-6 px-8 md:px-16 text-grey"></i>
+                </a>
+                <a href="message.html">
+                    <i class="fa-solid fa-message text-3xl md:text-4xl py-4 md:py-6 px-8 md:px-16 text-primary"></i>
+                </a>
+                <a href="post.html">
+                    <i class="fa-solid fa-plus text-3xl md:text-4xl py-4 md:py-6 px-8 md:px-16 text-primary"></i>
+                </a>
+                <a href="Profile page.html">
+                    <i class="fa-solid fa-users text-3xl md:text-4xl py-4 md:py-6 px-8 md:px-16 text-primary"></i>
+                </a>
+            </footer>
+        </section>
+        <section class="w-full hidden lg:block">
+            <nav class="flex justify-between items-center bg-white px-5 py-2 border-b border-black sticky top-0">
+                <div class="flex items-center space-x-4">
+                    <i class="fa-solid fa-arrow-left text-xl text-black"></i>
+                    <img src="~/images/img_avatar1.png" class="rounded-full h-16 w-16" />
+                </div>
+                <p class="text-2xl font-bold text-black">David Daniels</p>
+                <i class="fa-solid fa-gear text-black lg:text-2xl"></i>
+            </nav>
+            <div class="o">
+                <div class="px-2 py-2 space-y-10">
+                    <div class="">
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1.5 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1.5 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    I'm good, thank you
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    Good to know..
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Yeah so, how's your day
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    It's going great actually
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pb-20 space-y-7">
+                            <div class="space-y-1 space-x-4">
+                                <img src="~/images/ff1.jpg" class="w-7 h-7 rounded-full">
+                                <p class="bg-secondary text-black px-2 py-1 rounded-lg float-left md:px-4 xl:text-xl">
+                                    Hello there
+                                </p>
+                            </div>
+                            <div class="space-y-5 space-x-4">
+                                <img src="~/images/ff1.jpg" class="float-right w-7 h-7 rounded-full">
+                                <p class="bg-primary text-white px-2 py-1 rounded-lg float-right md:px-4 xl:text-xl">
+                                    How are you doing !!!
+                                </p>
+                            </div>
+                        </div>
+                       <div>
+                        <form action="" method="" class="sticky bottom-[-40px] h-20">
+                            <input type="text" class="h-[70px] w-[900px] bg-primary pl-3">
+                            <input type="submit" value="Send" class="rounded-lg bg-secondary h-24 w-20">
+                        </form>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+

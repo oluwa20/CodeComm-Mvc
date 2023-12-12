@@ -1,0 +1,114 @@
+﻿@using Microsoft.AspNetCore.Http
+@using System.Security.Claims
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodeComm</title>
+    <link rel="stylesheet" href="~/plugins/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;500;600;700;800&display=swap"
+          rel="stylesheet" />
+    <script src="~/tailwind/tailwind.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#050927",
+                        secondary: "#d20cce",
+                        rose: "#f02c60",
+                        white: "#ffffff",
+                        offwhite: "#F5F7F8",
+                        black: "#000000",
+                        gray: "#EBF3E8",
+                        grey: "#D0D4CA",
+                        transparent: "transparent"
+                    },
+                    screens: {
+                        small: "350px",
+                        smm: "376px",
+                        mms: "381px",
+                        med: "400px",
+                        big: "700px",
+                        large: "900px",
+                        lg: "1024px",
+                        xl: "1280px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        * {
+            font-family: "Poppins";
+        }
+
+        .like {
+            color: #f02c60;
+        }
+    </style>
+</head>
+<body class="bg-offwhite ">
+      
+        @* <div class="hidden big:hidden large:flex large:w-64 h-screen flex flex-col bg-gray border-t-4 rounded-tr-[80px] border-t-grey border-r-2 border-r-grey mt-2 shadow-xl fixed left-0">
+            <img src="~/images/codecommlogo.png" class="w-20 h-20 mx-6 my-10" alt="">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="text-xl text-primary mx-6 my-4">Welcome, @User.Identity.Name!</p>
+            <a asp-area="" asp-controller="User" asp-action="Logout" class="flex flex-row py-6">
+                <i class="fa-solid fa-door-open mx-6 text-xl text-primary"></i>
+                <h2 class="text-xl text-primary">Logout</h2>
+            </a>
+        } *@
+    <div class="hidden big:flex large:flex flex-col bg-gray border-t-4 rounded-tr-[80px] border-t-grey border-r-2 border-r-grey mt-2 shadow-xl fixed left-0">
+        <img src="~/images/codecommlogo.png" class="w-20 h-20 mx-6 my-10" alt="">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="text-xl text-primary mx-6 my-4">Welcome, @User.Identity.Name!</p>
+            <a asp-area="" asp-controller="User" asp-action="Logout" class="flex flex-row py-6">
+                <i class="fa-solid fa-door-open mx-6 text-xl text-primary"></i>
+                <h2 class="text-xl text-primary">Logout</h2>
+            </a>
+        }
+
+        <a asp-area="" asp-controller="User" asp-action="Homepage" class="flex flex-row py-6"><i class="fa-solid fa-house mx-6 text-xl"></i> <h2 class="text-xl text-primary">Home</h2></a>
+
+        <a asp-area="" asp-controller="User" asp-action="Message"   class="flex flex-row py-6"><i class="fa-solid fa-message mx-6 text-xl text-primary"></i> <h2 class="text-xl text-primary">Message</h2></a>
+
+        <a asp-area="" asp-controller="User" asp-action="Notification"  class="flex flex-row py-6"><i class="fa-regular fa-bell mx-6 text-xl text-primary"></i> <h2 class="text-xl text-primary">Notification</h2></a>
+
+        <a asp-controller="User" asp-action="Post"  class="flex flex-row py-6"><i class="fa-solid fa-plus mx-6 text-xl text-primary"></i> <h2 class="text-xl text-primary">Add a post</h2></a>
+
+        <a asp-controller="User" asp-action="Profile" class="flex flex-row py-6"><i class="fa-solid fa-users mx-6 text-xl text-primary"></i> <h2 class="text-xl text-primary">Profile</h2></a>
+
+        <a asp-controller="User" asp-action="Setting"  class="flex flex-row py-6"><i class="fa-solid fa-gear mx-6 text-xl text-primary"></i> <h2 class="text-xl text-primary">Settings</h2></a>
+
+    </div>
+
+   
+
+    @RenderBody()
+    <footer class="fixed bottom-0 w-full h-16 bg-white flex flex-row justify-evenly large:hidden">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            @* <p class="text-xl text-primary mx-6 my-4">Welcome, @User.Identity.Name!</p> *@
+            <a asp-area="" asp-controller="User" asp-action="Logout" class="flex flex-row py-6">
+                <i class="fa-solid fa-door-open mx-6 text-xl text-primary"></i>
+               
+            </a>
+        }
+        <a asp-controller="User" asp-action="Homepage"><i class="fa-solid fa-house text-3xl big:text-4xl py-4 big:py-6 px-8 big:px-16 text-grey"></i></a>
+        <a asp-controller="User" asp-action="Message"><i class="fa-solid fa-message text-3xl big:text-4xl py-4 big:py-6 px-8 big:px-16 text-primary"></i></a>
+        <a asp-controller="User" asp-action="Post"><i class="fa-solid fa-plus text-3xl big:text-4xl py-4 big:py-6 px-8 big:px-16 text-primary"></i></a>
+        <a asp-controller="User" asp-action="Profile"><i class="fa-solid fa-users text-3xl big:text-4xl py-4 big:py-6 px-8 big:px-16 text-primary"></i></a>
+    </footer>
+   
+</body>

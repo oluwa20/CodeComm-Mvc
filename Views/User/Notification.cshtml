@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Notification";
+    Layout = "_LayoutLogin";
+}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@* <title>Notification</title> *@
+<script src="~/tailwind/tailwind.js"></script>
+<link rel="stylesheet" href="~/plugins/fontawesome-free-6.4.2-web/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    white: "#ffffff",
+                    roses: "#F02C60",
+                    primary: "#f4f4f4",
+                    gray: "#D9D9D9",
+                    black: "#000000",
+                    secondary: "#050927",
+                    grey: "#D0D4CA",
+                },
+                screens: {
+                    sm: "400px",
+                    md: "800px",
+                    lg: "1024px",
+                    // => media (min-width: 1024px) { ... }
+
+                    xl: "1280px",
+                    // => media (min-width: 1280px) { ... }
+
+                    "2xl": "1536px",
+                    // => media (min-width: 1536px) { ... }
+
+                },
+            },
+        },
+    };
+    <style>
+          * {
+        font- family: "Poppins";
+          }
+    </style>
+</script>
+<main class="lg:flex lg:space-x-64">
+
+    <section class="hidden md:hidden lg:block lg:flex lg:w-64 h-screen flex-col bg-[#EBF3E8] border-t-4 border-t-grey border-r-2 border-r-grey shadow-xl fixed left-0">
+        <img src="~/images/codecommlogo.png"
+             class="w-20 h-20 mx-6 lg:my-5"
+             alt="" />
+        <a href="homepage.html" class="flex flex-row py-6">
+            <i class="fa-solid fa-house mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Home</h2>
+        </a>
+
+        <a href="message.html" class="flex flex-row py-6">
+            <i class="fa-solid fa-message mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Message</h2>
+        </a>
+
+        <a href="notify.html" class="flex flex-row py-6">
+            <i class="fa-regular fa-bell mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Notification</h2>
+        </a>
+
+        <a href="post.html" class="flex flex-row py-6">
+            <i class="fa-solid fa-plus mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Add a post</h2>
+        </a>
+
+        <a href="Profile page.html" class="flex flex-row py-6">
+            <i class="fa-solid fa-users mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Profile</h2>
+        </a>
+
+        <a href="settings.html" class="flex flex-row py-6">
+            <i class="fa-solid fa-gear mx-6 text-xl text-wowo"></i>
+            <h2 class="text-xl text-wowo">Settings</h2>
+        </a>
+    </section>
+
+
+
+
+
+
+
+      <section class="w-full"> 
+ 
+        <div class="bg-primary sticky top-0 px-3 py-5 border-b border-grey">
+            <p class="text-black text-2xl font-bold">New</p>
+        </div>
+
+        <div class="px-3 py-3 space-y-7 sm:px-6 md:px-14">
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji just made a comment on your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-comments text-xs sm:text-sm"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji liked your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-heart text-xs sm:text-sm"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji just made a comment on your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-comments text-xs sm:text-sm"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji just made a comment on your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-comments text-xs sm:text-sm"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji just made a comment on your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-comments text-xs sm:text-sm"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-2 sm:space-x-4 md:space-x-7">
+                    <img src="~/images/pic8.jpg" class="rounded-full h-7 w-7 sm:h-14 sm:w-14">
+                    <p class="text-slate-700 text-sm sm:text-lg">Deji just made a comment on your post.</p>
+                </div>
+                <div class="flex space-x-3 items-center">
+                    <p class="text-xs sm:text-lg">2mins</p>
+                    <i class="fa-solid fa-comments text-xs sm:text-sm"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="sticky bottom-0 w-full h-16 md:h-20 bg-white flex items-center justify-evenly flex-row lg:hidden">
+        <a href="homepage.html">
+            <i class="fa-solid fa-house text-3xl md:text-4xl py-4 md:py-6  text-[#232168]"></i>
+        </a>
+        <a href="message.html">
+            <i class="fa-solid fa-message text-3xl md:text-4xl py-4 md:py-6  text-[#232168]"></i>
+        </a>
+        <a href="post.html">
+            <i class="fa-solid fa-plus text-3xl md:text-4xl py-4 md:py-6  text-[#232168]"></i>
+        </a>
+        <a href="Profile page.html">
+            <i class="fa-solid fa-users text-3xl md:text-4xl py-4 md:py-6  text-[#232168]"></i>
+        </a>
+    </footer>
+ </main> 

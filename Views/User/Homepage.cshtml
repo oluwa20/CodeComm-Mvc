@@ -1,0 +1,369 @@
+﻿ @model List<CodeComm.Models.ViewModel.GetAllUsersDto>
+ @{
+    ViewData["Title"] = "Home Page";
+    Layout = "_LayoutHome";
+}
+
+
+<div class="flex flex-row fixed bg-offwhite w-full large:hidden">
+    <div class="w-10 h-10 big:w-20 big:h-20 border border-gray rounded-full my-8 big:my-10 mx-6 big:mx-8  object-cover"><img src="~/images/pic1.jpg" alt="" class="w-10 h-10 big:w-20 big:h-20 rounded-full object-cover"></div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p class="text-xl text-primary mx-6 my-4">Welcome, @User.Identity.Name!</p>
+     
+    }
+    <div class="flex flex-row w-8/12 h-4 big:w-8/12 h-8 big:h-20 bg-grey mt-10 rounded-full">
+        <button><i class="fa-solid fa-magnifying-glass big:text-2xl py-2  big:py-6 pl-6"></i></button>
+        <input type="text" placeholder="Search" class="w-full bg-grey big:text-[30px] rounded-full text-[20px] focus:outline-none px-2">
+    </div>
+
+    <div class="flex flex-row">
+        <a href="notification.html"><i class="fa-regular fa-bell text-xl big:text-4xl pt-10 big:py-16 pl-6"></i></a>
+        <a href="settings.html"><i class="fa-solid fa-gear text-xl big:text-4xl pt-10 big:py-16 px-4"></i></a>
+    </div>
+</div>
+<hr class="mt-[-15px] text- opacity:10">
+
+<div class="flex flex-row">
+    <div class="hidden big:flex big:flex-col big:mt-[170px] large:hidden">
+        <h1 class="font-semibold text-3xl py-2 px-6">STATUS</h1>
+        <div class="w-full h-screen border-grey shadow-xl border-t-4 border-r rounded-xl">
+            <div class="flex flex-col ">
+                <div class="w-24 h-24 border-2 border-gray rounded-full my-6 mx-10  object-cover">
+                    <img src="~/images/pic1.jpg" alt="" class="w-24 h-24 rounded-full object-cover">
+                    <a href=""><i class="fa-solid fa-circle-plus px-16 mt-[-8px] text-3xl  text-[#D80032] font-semibold"></i></a>
+                    <p class="text-[16px] font-semibold ">Your story</p>
+
+                </div>
+
+                <div class="w-24 h-24 border-2 border-gray rounded-full my-10 mx-10  object-cover">
+                    <img src="~/images/pic2.jpg" alt="" class="w-24 h-24 rounded-full object-cover">
+
+                    <p class="text-[20px] py-4 font-semibold">Aminat123</p>
+                </div>
+
+                <div class="w-24 h-24 border-2 border-gray rounded-full my-10 mx-10  object-cover">
+                    <img src="~/images/pic3.jpg" alt="" class="w-24 h-24 rounded-full object-cover">
+
+                    <p class="text-[20px] font-semibold py-8">
+                        Diana123
+                    </p>
+                </div>
+
+                <div class="w-24 h-24 border-2 border-gray rounded-full my-10 mx-10  object-cover">
+                    <img src="~/images/pic4.jpg" alt="" class="w-24 h-24 rounded-full object-cover">
+
+                    <p class="text-[20px] font-semibold py-8">Conor123</p>
+                </div>
+
+                <div class="w-24 h-24 border-2 border-gray rounded-full my-10 mx-10  object-cover">
+                    <img src="~/images/pic4.jpg" alt="" class="w-24 h-24 rounded-full object-cover">
+
+                    <p class="text-[20px] font-semibold py-8">Conor123</p>
+                </div>
+
+            
+            </div>
+
+        </div>
+    </div>
+  
+
+    <div class="mx-6 big:mx-4 flex flex-col w-11/12 big:w-9/12 mt-[110px] big:mt-[170px] right-0 large:w-7/12 lg:w-9/12 xl:w-10/12 large:mt-6 large:space-x-64">
+        <h1 class="font-semibold text-lg big:text-3xl py-2 large:text-xl">EXPLORE</h1>
+        <div class="flex flex-col">
+            <a href="Profile page.html">
+                <div class="w-10 h-10 big:w-16 big:h-16 large:w-12 large:h-12 border-2 rounded-full my-2 big:my-4 flex flex-row  object-cover">
+                    <img src="~/images/pic4.jpg" alt="" class="w-10 h-10 big:w-16 big:h-16 large:w-12 large:h-12 rounded-full object-cover">
+                    <p class="text-md big:text-xl large:text-md large:py-3 px-4 big:px-6  font-semibold py-1 big:py-6">Conor123</p>
+                </div>
+            </a>
+
+
+            <div class="flex flex-row w-full">
+                <div class="w-full big:w-full rounded-md big:rounded-full">
+                    <a href=""><img src="~/images/pic6.jpg" class="w-full h-72 big:h-96 large:h-[400px] object-cover rounded-md big:rounded-xl" alt=""></a>
+                    <p class="pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, sint beatae obcaecati odio dicta error expedita odit iure laboriosam. Doloribus, laudantium maiores veritatis dolores magni velit vero assumenda fugiat ipsa.</p>
+                    <p class="font-semibold py-3 float-right">1 hour ago</p>
+                    <hr class="mt-12">
+                </div>
+
+                <div class="flex flex-col w-1/12">
+                    <a href="comment.html"><i class="fa-regular fa-comment-dots text-xl big:text-3xl large:text-2xl pl-5 py-5 hover:text-rose large:pl-4"></i></a>
+                    <button onclick="likee('1')" id="1">
+                        <i class="fa-solid fa-thumbs-up text-xl big:text-3xl large:text-2xl pl-4 py-5 large:pl-2 hover:text-grey"></i>
+                        <div class="text-black">12K</div>
+                    </button>
+                    <button><i class="fa-solid fa-share text-xl big:text-3xl large:text-2xl pl-4 py-5 hover:text-rose"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="Profile page.html">
+                <div class="w-10 h-10 big:w-16 big:h-16 large:w-12 large:h-12 border-2 rounded-full my-2 big:my-4 flex flex-row  object-cover">
+                    <img src="~/images/pic2.jpg" alt="" class="w-10 h-10 big:w-16 large:w-12 large:h-12 big:h-16 rounded-full object-cover">
+                    <p class="text-md big:text-xl large:py-3 px-4 big:px-6 font-semibold py-1 big:py-6">Aminat123</p>
+                </div>
+            </a>
+
+            <div class="flex flex-row w-full">
+                <div class="w-full big:w-11/12 rounded-md big:rounded-full">
+                    <a href=""><img src="~/images/pic7.jpg" class="w-full h-72 big:h-96 large:h-[400px] object-cover rounded-md big:rounded-xl" alt=""></a>
+                    <p class="pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, sint beatae obcaecati odio dicta error expedita odit iure laboriosam. Doloribus, laudantium maiores veritatis dolores magni velit vero assumenda fugiat ipsa.</p>
+                    <p class="font-semibold py-3 float-right">43min ago</p>
+                    <hr class="mt-12">
+                </div>
+
+                <div class="flex flex-col w-1/12">
+                    <a href="comment.html"><i class="fa-regular fa-comment-dots text-xl big:text-3xl large:text-2xl pl-5 py-5 hover:text-rose large:pl-4"></i></a>
+                    <button onclick="likee('2')" id="2">
+                        <i class="fa-solid fa-thumbs-up text-xl big:text-3xl large:text-2xl pl-4 py-5 large:pl-2 hover:text-grey"></i>
+                        <div class="text-black mx-2">1.2M</div>
+                    </button>
+                    <button><i class="fa-solid fa-share text-xl big:text-3xl large:text-2xl pl-4 py-5 hover:text-rose"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="Profile page.html">
+                <div class="w-10 h-10 big:w-16 big:h-16 large:w-12 large:h-12 border-2 rounded-full my-2 big:my-4 flex flex-row  object-cover">
+                    <img src="~/images/pic2.jpg" alt="" class="w-10 h-10 big:w-16 big:h-16 large:w-12 large:h-12 rounded-full object-cover">
+                    <p class="text-md big:text-xl large:py-3 px-4 big:px-6 font-semibold py-1 big:py-6">Aminat123</p>
+                </div>
+            </a>
+
+            <div class="flex flex-row w-full">
+                <div class="w-full big:w-11/12 rounded-md big:rounded-full">
+                    <a href=""><img src="~/images/pic8.jpg" class="w-full h-72 big:h-96 large:h-[400px] object-cover rounded-md big:rounded-xl" alt=""></a>
+                    <p class="pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, sint beatae obcaecati odio dicta error expedita odit iure laboriosam. Doloribus, laudantium maiores veritatis dolores magni velit vero assumenda fugiat ipsa.</p>
+                    <p class="font-semibold py-3 float-right">1 hour ago</p>
+                    <hr class="mt-12">
+                </div>
+
+                <div class="flex flex-col w-1/12">
+                    <a href="comment.html"><i class="fa-regular fa-comment-dots text-xl big:text-3xl large:text-2xl pl-5 py-5 hover:text-rose large:pl-4"></i></a>
+                    <button onclick="likee('3')" id="3">
+                        <i class="fa-solid fa-thumbs-up text-xl big:text-3xl large:text-2xl pl-4 py-5 large:pl-2 hover:text-grey"></i>
+                        <div class="text-black mx-2">502</div>
+                    </button>
+                    <button><i class="fa-solid fa-share text-xl big:text-3xl large:text-2xl pl-4 py-5 hover:text-rose"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex flex-col w-full h-36 fixed bottom-6 bg-offwhite big:hidden overflow-x-scroll large:overflow-x-scroll large:flex large:bottom-0">
+            <h1 class="font-semibold text-sm py-1 pb-2 large:text-lg">STATUS</h1>
+            <div class="flex flex-row">
+                <div class="flex flex-col large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full  object-cover flex flex-row">
+                        <img src="~/images/pic1.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <a href=""><i class="fa-solid fa-circle-plus pt-6 text-lg  text-[#D80032] font-semibold"></i></a>
+                    </div>
+                    <p class="text-sm font-semibold ">Your&nbsp;Story</p>
+                </div>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6 object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic2.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Aminat123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic3.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Diana123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic4.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Cornor123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic5.jpeg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">User1903</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic2.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Aminat123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic3.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Diana123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic4.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Cornor123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic5.jpeg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">User1903</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic2.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Aminat123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic3.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Diana123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic4.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Cornor123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic5.jpeg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">User1903</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic2.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Aminat123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic3.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Diana123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic4.jpg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">Cornor123</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="w-12 h-12 border-2 border-gray rounded-full mx-6  object-cover large:border-2 large:border-grey large:bg-gray large:rounded-md large:h-20 large:w-20">
+                        <img src="~/images/pic5.jpeg" alt="" class="w-12 h-12 rounded-full object-cover">
+
+                        <p class="text-sm text-center font-semibold">User1903</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hidden big:hidden large:flex lg:w-60 h-screen bg-gray flex-col bg-gray border-t-4 rounded-tl-[80px] border-t-grey border-l-2 border-l-grey mt-2 shadow-xl fixed right-0">
+        <div class="flex flex-row ">
+            <div class="w-10 h-10 border border-gray rounded-full my-12 mx-2 ml-4 object-cover">
+                <a href="Profile page.html"><img src="~/images/pic1.jpg" alt="" class="w-10 h-10 rounded-full object-cover"></a>
+            </div>
+
+            <div class="flex flex-row w-8/12 h-10 my-12 rounded-full bg-grey">
+                <button><i class="fa-solid fa-magnifying-glass text-md py-3 pl-3"></i></button>
+                <input type="text" placeholder="Search" class="w-full bg-grey rounded-full px-2 focus:outline-none">
+            </div>
+        </div>
+
+        <!-- <ul class="mx-8 text-lg space-y-4 my-6">
+         <div class="flex flex-row"><a href=""><li class="text-xl">User12476</li></a>
+           <button onclick="clear()"><i class="fa-solid fa-xmark fixed right-10"></i></button>
+         </div>
+
+           <div class="flex flex-row"><a href=""><li class="text-xl">Samurai</li></a>
+           <i class="fa-solid fa-xmark fixed right-10"></i></div>
+
+         <div class="flex flex-row"><a href=""><li class="text-xl">Julius</li></a>
+           <i class="fa-solid fa-xmark fixed right-10"></i></div>
+        </ul>
+
+        <button><p class="text-center my-6 hover:font-semibold">View more</p></button> -->
+
+        <h2 class="my-4 mx-6 font-semibold text-lg">People you may know</h2>
+        <div class="max-h-60 overflow-y-auto">
+            @if (Model != null && Model.Any())
+            {
+                <ul class="space-y-4">
+                    @foreach (var user in Model)
+                    {
+                        <li class="bg-gray-100 p-4 rounded-md shadow-md">
+                            <div class="font-semibold text-lg">Username: @user.username</div>
+                            <div class="text-gray-700">Email: @user.userEmail</div>
+                            <!-- Add more details as needed -->
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-gray-500">No users found.</p>
+            }
+        </div>
+
+
+
+
+
+       
+
+       
+
+        <button><p class="text-center my-6 hover:font-semibold">View more</p></button>
+
+    </div>
+
+</div>
+<script>
+    function likee(like) {
+        var like = document.getElementById(like);
+        like.classList.toggle("like")
+    }
+</script>

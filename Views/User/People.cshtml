@@ -1,0 +1,85 @@
+﻿@model List<CodeComm.Models.ViewModel.GetAllUsersDto>
+
+@{
+    ViewData["Title"] = "People";
+}
+
+<h1>People</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userProfilePicUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userIsVerified)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userAccountIsDisabled)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].userCreatedAt)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userProfilePicUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userIsVerified)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userAccountIsDisabled)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userCreatedAt)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.userId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.userId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.userId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data available.</p>
+}
